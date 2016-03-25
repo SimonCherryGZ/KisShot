@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/launcher3"
+    android:orientation="vertical" >
+        
+        <TextView
+            android:id="@+id/text_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:text="@string/text_version" />
+        
+        <TextView
+            android:id="@+id/copyright_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="28dp"
+            android:text="@string/copyright_text"
+            android:textColor="#c0e0e0e0"
+            android:textSize="12sp" />
+        
+        <Button
+            android:id="@+id/gallery_btn"
+            android:layout_width="216dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/copyright_text"
+            android:layout_marginBottom="18dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/img_btn"
+            android:contentDescription="@string/gallery_btn_text"
+            android:text="@string/gallery_string"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:padding="16dp" />
+
+        <Button
+            android:id="@+id/option_btn"
+            android:layout_width="216dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/gallery_btn"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/img_btn"
+            android:contentDescription="@string/option_btn_text"
+            android:text="@string/option_string"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="normal" 
+            android:padding="16dp"/>
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="216dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/option_btn"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/img_btn"
+            android:contentDescription="@string/login_btn_text"
+            android:text="@string/login_string"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:padding="16dp" />
+        
+        <ImageView
+            android:id="@+id/img_load"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/loading2"
+            android:contentDescription="@string/app_name"
+            android:visibility="visible" />
+
+</RelativeLayout>

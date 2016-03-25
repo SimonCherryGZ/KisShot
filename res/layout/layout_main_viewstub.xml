@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/desktop_main_bg3">
+    
+    <ImageView
+	    android:id="@+id/img_background"
+	    android:contentDescription="@string/app_name"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@drawable/b4"
+	    android:visibility="invisible" />
+    
+	 <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/title_text0"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+	 
+	 <TextView 
+   	    android:id="@+id/text_volume" 
+   	    android:layout_width="match_parent" 
+   	    android:layout_height="wrap_content" 
+   	    android:layout_alignParentBottom="true" 
+   	    android:layout_alignParentLeft="true" 
+   	    android:text="@string/val_text" 
+   	    android:textSize="30sp" 
+   	    android:visibility="invisible" />
+   	
+   	<FrameLayout
+   	    android:id="@+id/fl_card"
+   	    android:layout_width="150dp"
+   	    android:layout_height="225dp"
+   	    android:layout_above="@+id/text_volume"
+   	    android:layout_centerHorizontal="true"
+   	    android:scaleType="fitXY" >
+
+   	    <ImageView
+   	        android:id="@+id/img_card_white"
+   	        android:contentDescription="@string/app_name"
+   	        android:layout_width="150dp"
+   	        android:layout_height="225dp"
+   	        android:layout_marginBottom="16dp"
+   	        android:scaleType="fitXY"
+   	        android:src="@drawable/contrary2"
+   	        android:visibility="invisible" />
+   	    
+   	    <ImageView
+   	        android:id="@+id/img_card"
+   	        android:contentDescription="@string/app_name"
+   	        android:layout_width="150dp"
+   	        android:layout_height="225dp"
+   	        android:layout_marginBottom="16dp"
+   	        android:scaleType="fitXY"
+   	        android:src="@drawable/contrary"
+   	        android:visibility="invisible" />
+   	</FrameLayout>
+   	
+</RelativeLayout>

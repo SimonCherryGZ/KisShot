@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <ImageView
+        android:id="@+id/img_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/showdialog" 
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/text_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img_dialog"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="120dp"
+        android:text="@string/dialog_text1"
+        android:textColor="@android:color/white" 
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btn_dialog1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/text_dialog"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_selector"
+        android:textColor="#ffffff"
+        android:text="@string/select_text1" 
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btn_dialog2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/img_dialog"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/btn_selector"
+        android:textColor="#ffffff"
+        android:text="@string/select_text2"
+        android:visibility="invisible" />
+
+</RelativeLayout>

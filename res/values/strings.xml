@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">KissShot</string>
+    <string name="login_btn_text">开始占卜</string>
+    <string name="option_btn_text">使用向导</string>
+    <string name="gallery_btn_text">鉴赏模式</string>
+    <string name="login_string">开 始 占 卜</string>
+    <string name="option_string">使 用 向 导</string>
+    <string name="gallery_string">鉴 赏 模 式</string>
+    
+    <string name="dialog_avatar_select_title">设置你的塔罗牌</string>
+    <string name="dialog_avatar_btn_camera">拍照上传</string>
+    <string name="dialog_avatar_btn_local">从本地文件上传</string>
+    
+    <string name="title_text0">☆尊敬的客人，欢迎光临☆</string>
+    <string name="title_text1">☆闭上双眼祈祷，然后吹熄蜡烛☆</string>
+    <string name="title_text2">☆占卜谁是您的真命天子☆</string>
+    <string name="title_text3">☆占卜您的意中人喜欢谁☆</string>
+    <string name="title_text4">☆请问您想占卜什么内容☆</string>
+    <string name="title_text5">☆请翻开塔罗牌，查看占卜结果☆</string>
+    
+    <string name="btn_text">准备祈祷</string>
+    <string name="val_text">0</string>
+    
+    <string name="tutorial_text1">1、首先骗妹纸说本APP是一个占卜软件</string>
+    <string name="tutorial_text2">2、如果选择第一个占卜项目</string>
+    <string name="tutorial_text3">3、请妹纸许愿，然后吹熄屏幕中的蜡烛</string>
+    <string name="tutorial_text4">4、麦克风捕捉到妹纸的吐息就会启动拍照</string>
+    <string name="tutorial_text5">5、这样就获得妹纸KISS的表情了</string>
+    <string name="tutorial_text6">6、如果选择第二个占卜项目</string>
+    <string name="tutorial_text7">7、同样地请妹纸吹熄蜡烛</string>
+    <string name="tutorial_text8">8、就会显示自定义图片，比如你的照片</string>
+    <string name="tutorial_text9">9、点击设置你的自定义图片</string>
+    
+    <string name="tutorial_index1">1/9</string>
+    <string name="tutorial_index2">2/9</string>
+    <string name="tutorial_index3">3/9</string>
+    <string name="tutorial_index4">4/9</string>
+    <string name="tutorial_index5">5/9</string>
+    <string name="tutorial_index6">6/9</string>
+    <string name="tutorial_index7">7/9</string>
+    <string name="tutorial_index8">8/9</string>
+    <string name="tutorial_index9">9/9</string>
+    
+    <string name="dialog_text1">请问想占卜什么问题？</string>
+    <string name="dialog_text2">请闭目祈祷，然后吹熄蜡烛。</string>
+    
+    <string name="select_text1">谁是我的真命天子</string>
+    <string name="select_text2">我的意中人喜欢谁</string>
+    
+    <string name="avatar_text">设置你的塔罗牌</string>
+    <string name="avatar_camera">拍照上传</string>
+    <string name="avatar_local">从本地图片上传</string>
+    
+    <string name="text_version">ver 0.0.1</string>
+    <string name="copyright_text">Copyright © 2016 SimonCherry. All Rights Reserved.</string>
+    <string name="tv_gallery_title">Gallery</string>
+    <string name="tv_gallery_divider">——————————————————</string>
+    <string name="tv_gallery_empty">空空如也</string>
+
+</resources>

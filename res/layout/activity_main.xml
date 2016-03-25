@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <ViewStub 
+        android:id="@+id/viewstub_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inflatedId="@+id/inflated_main"
+        android:layout="@layout/layout_main_viewstub" />
+    
+    <ViewStub 
+        android:id="@+id/viewstub_dialog"
+        android:layout_width="260dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+	    android:layout_centerVertical="true"
+	    android:scaleType="fitXY"
+	    android:inflatedId="@+id/inflated_dialog"
+	    android:layout="@layout/layout_dialog" />
+    
+    <ImageView
+        android:id="@+id/img_load"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/loading2"
+        android:contentDescription="@string/app_name" />
+ 
+</RelativeLayout>

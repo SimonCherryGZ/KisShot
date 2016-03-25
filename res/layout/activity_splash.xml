@@ -1,0 +1,1 @@
+<?xml version="1.0"  encoding="UTF-8"?><LinearLayout     android:id="@+id/loginRoot"     xmlns:android="http://schemas.android.com/apk/res/android"     android:layout_width="fill_parent"     android:layout_height="fill_parent"     android:orientation="vertical"     android:background="@drawable/welcome">        </LinearLayout>
