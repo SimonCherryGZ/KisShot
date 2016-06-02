@@ -56,7 +56,7 @@ import com.simoncherry.kisshot.Utils.Rotate3d;
  * @author SimonCherry 2016.01.11
  *
  */
-@SuppressWarnings("deprecation")
+//@SuppressWarnings("deprecation")
 public class MainActivity extends Activity  {
 
 	private static final String KISS_TAG = "KissLog";
