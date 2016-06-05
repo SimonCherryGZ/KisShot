@@ -56,7 +56,7 @@ import com.simoncherry.kisshot.Utils.Rotate3d;
  * @author SimonCherry 2016.01.11
  *
  */
-//@SuppressWarnings("deprecation")
+@SuppressWarnings("deprecation")
 public class MainActivity extends Activity  {
 
 	private static final String KISS_TAG = "KissLog";
@@ -493,36 +493,48 @@ public class MainActivity extends Activity  {
 					@Override
 					public void onPictureTaken(byte[] data, Camera camera) {
 						
-						String name = "temp_pic.jpeg";
-						File file = new File("/sdcard/KisShot/pic/");
-						file.mkdirs();
-						String filename=file.getPath()+File.separator+name;
-						
-						Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length) ;
-						Matrix m = new Matrix();
-						m.setRotate(270, (float) bitmap.getWidth() / 2, (float) bitmap.getHeight() / 2);
-						bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), m, true);
-						
-						try {
+						final byte[] mData = data;
+						new Thread(new Runnable() {
 
-							FileOutputStream fileOutputStream = new FileOutputStream(filename);
-							boolean b = bitmap.compress(CompressFormat.JPEG, 100, fileOutputStream);
-							fileOutputStream.flush();
-							fileOutputStream.close();
-
-							if (b) {
-								myHandler.sendEmptyMessage(MSG_TRY_SHOT);
-							}else {
-								Toast.makeText(getApplicationContext(), "take photo failed", Toast.LENGTH_LONG).show();
+							@Override
+				            public void run() {
+								
+								String name = "temp_pic.jpeg";
+								File file = new File("/sdcard/KisShot/pic/");
+								file.mkdirs();
+								String filename=file.getPath()+File.separator+name;
+								
+								//Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length) ;
+								Bitmap bitmap = BitmapFactory.decodeByteArray(mData, 0, mData.length);
+								Matrix m = new Matrix();
+								m.setRotate(270, (float) bitmap.getWidth() / 2, (float) bitmap.getHeight() / 2);
+								bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), m, true);
+								
+								try {
+			
+									FileOutputStream fileOutputStream = new FileOutputStream(filename);
+									boolean b = bitmap.compress(CompressFormat.JPEG, 100, fileOutputStream);
+									fileOutputStream.flush();
+									fileOutputStream.close();
+			
+									if (b) {
+										myHandler.sendEmptyMessage(MSG_TRY_SHOT);
+									}else {
+										Toast.makeText(getApplicationContext(), "take photo failed", Toast.LENGTH_LONG).show();
+									}
+			
+								} catch (FileNotFoundException e) {
+									e.printStackTrace();
+								} catch (IOException e) {
+									e.printStackTrace();
+								}finally{
+									releaseCamera();	
+								}
+								
 							}
-
-						} catch (FileNotFoundException e) {
-							e.printStackTrace();
-						} catch (IOException e) {
-							e.printStackTrace();
-						}finally{
-							releaseCamera();	
-						}
+						}).start();
+						
+							
 					}
 				});
 				
